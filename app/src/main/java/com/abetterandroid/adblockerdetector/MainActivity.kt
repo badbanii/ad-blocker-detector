@@ -10,37 +10,26 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.abetterandroid.adblockerdetector.ui.mainscreen.MainScreen
 import com.abetterandroid.adblockerdetector.ui.theme.AdBlockerDetectorTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AdBlockerDetectorTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+            MyApp {
+                MainScreen()
             }
-        }
     }
 }
-
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun MyApp(content: @Composable () -> Unit) {
+    MaterialTheme {
+        content()
+    }
 }
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    AdBlockerDetectorTheme {
-        Greeting("Android")
-    }
-}
+        MainScreen()
+}}
