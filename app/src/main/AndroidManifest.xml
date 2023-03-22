@@ -2,6 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <queries>
+        <package android:name="com.savageorgiev.blockthis" />
+        <package android:name="org.adaway" />
+        <package android:name="org.blokada.alarm"/>
+        <package android:name="org.blokada.origin.alarm" />
+        <package android:name="org.blokada.plus" />
+        <package android:name="org.dschuermann.adaway" />
+        <package android:name="com.github.adblockremover" />
+        <package android:name="com.stevesoltys.seedvault.plugins.adblocker" />
+        <package android:name="com.industries.tracer.apprtc" />
+        <package android:name= "com.blokada.lite" />
+        <package android:name=  "com.blokada.alarm.lite" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
